@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enzo Teixeira | Portfolio — Terminal Interactif</title>
+  <meta name="description" content="Portfolio d'Enzo Teixeira, étudiant en informatique & futur Product Owner. Expériences numériques et analyse des besoins." />
+  <!-- Google Fonts : monospace pour l'ambiance terminal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========================================================================
+       CURSEUR TERMINAL PERSONNALISÉ
+       ======================================================================== -->
+  <div id="terminal-cursor" class="cursor"></div>
+
+  <!-- ========================================================================
+       OVERLAY DE SCANLINES (effet écran CRT)
+       ======================================================================== -->
+  <div class="scanlines"></div>
+
+  <!-- ========================================================================
+       NAVIGATION TERMINAL (toujours accessible)
+       ======================================================================== -->
+  <nav class="terminal-nav" id="main-nav">
+    <div class="nav-prompt">C:\Users\enzo&gt; </div>
+    <ul class="nav-links">
+      <li><a href="#hero" data-cmd="accueil">accueil</a></li>
+      <li><a href="#cv" data-cmd="cv">cv</a></li>
+      <li><a href="#experience" data-cmd="experience">experience</a></li>
+      <li><a href="#projets" data-cmd="projets">projets</a></li>
+      <li><a href="#certifications" data-cmd="certifications">certifications</a></li>
+      <li><a href="#veille" data-cmd="veille">veille</a></li>
+      <li><a href="#passions" data-cmd="passions">passions</a></li>
+      <li><a href="#contact" data-cmd="contact">contact</a></li>
+    </ul>
+    <div class="nav-status" id="nav-status">system ready</div>
+  </nav>
+
+  <!-- ========================================================================
+       HERO SECTION — Animation d'entrée percutante (typing effect)
+       ======================================================================== -->
+  <section id="hero" class="hero">
+    <div class="hero-container">
+      <div class="terminal-window">
+        <div class="terminal-header">
+          <div class="terminal-controls">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="terminal-title">portfolio_enzo.sh</div>
+        </div>
+        <div class="terminal-body">
+          <div class="command-line" id="hero-command">
+            <span class="prompt">enzo@portfolio:~$</span>
+            <span class="typing-text" id="typing"></span>
+            <span class="cursor-blink">█</span>
+          </div>
+          <div class="output" id="hero-output"></div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-title glitch-text" data-text="ENZO TEIXEIRA">ENZO TEIXEIRA</h1>
+        <p class="hero-subtitle">Étudiant en informatique &amp; Futur Product Owner</p>
+        <p class="hero-tagline">"Expériences numériques et analyse des besoins"</p>
+        <div class="hero-cta">
+          <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+          <a href="#cv" class="btn btn-outline">Consulter mon CV</a>
+        </div>
+        <div class="hero-social">
+          <a href="#" class="social-link" aria-label="GitHub">github</a>
+          <a href="#" class="social-link" aria-label="LinkedIn">linkedin</a>
+          <a href="mailto:contact@example.com" class="social-link" aria-label="Mail">mail</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CV ANIMÉ — Parcours interactif au scroll / clic
+       ======================================================================== -->
+  <section id="cv" class="cv-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="cmd">$</span> cat cv.md</h2>
+      <p class="section-desc">Mon parcours présenté de manière interactive. Clique sur une étape pour le détail.</p>
+    </div>
+
+    <div class="cv-timeline" id="cv-timeline">
+      <!-- Les entrées CV sont injectées par JS pour garder le HTML propre -->
+    </div>
+
+    <div class="cv-detail" id="cv-detail">
+      <div class="cv-detail-content">
+        <h3 id="cv-detail-title">Sélectionne une étape</h3>
+        <p id="cv-detail-desc">Clique sur un élément de la timeline ci-dessus.</p>
+        <ul id="cv-detail-list" class="cv-detail-list"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       STAGES & EXPÉRIENCES PRO — Layout détaillé (Lorem ipsum pour l'instant)
+       ======================================================================== -->
+  <section id="experience" class="experience-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="cmd">$</span> ls -la experiences/</h2>
+      <p class="section-desc">Stages et expériences professionnelles détaillées.</p>
+    </div>
+
+    <div class="experience-grid" id="experience-grid">
+      <!-- Injecté par JS -->
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PROJETS — Galerie en deux catégories, cartes interactives 3D / glitch
+       ======================================================================== -->
+  <section id="projets" class="projects-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="cmd">$</span> ls projects/</h2>
+      <p class="section-desc">Galerie séparée en deux catégories : lycée &amp; personnels.</p>
+    </div>
+
+    <div class="project-filters">
+      <button class="filter-btn active" data-filter="all">tous</button>
+      <button class="filter-btn" data-filter="lycee">lycée</button>
+      <button class="filter-btn" data-filter="personnel">personnel</button>
+    </div>
+
+    <div class="project-grid" id="project-grid">
+      <!-- Injecté par JS -->
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CERTIFICATIONS & MOOCs — Badges validés / en préparation
+       ======================================================================== -->
+  <section id="certifications" class="certs-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="cmd">$</span> cat certifications.txt</h2>
+      <p class="section-desc">Badges et certifications validés ou en préparation.</p>
+    </div>
+
+    <div class="certs-grid" id="certs-grid">
+      <!-- Injecté par JS -->
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       VEILLE TECHNOLOGIQUE — Flux d'actualité / timeline d'articles
+       ======================================================================== -->
+  <section id="veille" class="veille-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="cmd">$</span> tail -f tech-feed.log</h2>
+      <p class="section-desc">Ma veille technologique — sujets récents et lectures en cours.</p>
+    </div>
+
+    <div class="veille-grid" id="veille-grid">
+      <!-- Injecté par JS -->
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PASSIONS — Section visuelle décalée hors informatique
+       ======================================================================== -->
+  <section id="passions" class="passions-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="cmd">$</span> cat passions.log</h2>
+      <p class="section-desc">Centres d'intérêt hors informatique.</p>
+    </div>
+
+    <div class="passions-grid" id="passions-grid">
+      <!-- Injecté par JS -->
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONTACT / FOOTER
+       ======================================================================== -->
+  <section id="contact" class="contact-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="cmd">$</span> contact me</h2>
+    </div>
+    <div class="contact-content">
+      <div class="contact-info">
+        <p><span class="label">Nom :</span> Enzo Teixeira</p>
+        <p><span class="label">Statut :</span> Étudiant en informatique &amp; Futur Product Owner</p>
+        <p><span class="label">Email :</span> <a href="mailto:contact@example.com">contact@example.com</a></p>
+        <p><span class="label">Localisation :</span> France</p>
+      </div>
+      <div class="contact-social">
+        <a href="#" class="social-link">github</a>
+        <a href="#" class="social-link">linkedin</a>
+        <a href="mailto:contact@example.com" class="social-link">mail</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="terminal-footer">
+    <div class="footer-content">
+      <p>&copy; <span id="year"></span> Enzo Teixeira — Portfolio terminal interactif.</p>
+      <p>Construit avec HTML, CSS &amp; JavaScript Vanilla. Hébergé sur GitHub Pages.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
