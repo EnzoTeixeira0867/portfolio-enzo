@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enzo Teixeira | Portfolio — Terminal Interactif</title>
-  <meta name="description" content="Portfolio d'Enzo Teixeira, étudiant en informatique & futur Product Owner. Expériences numériques et analyse des besoins." />
+  <title>Enzo Sousa Teixeira | Portfolio</title>
+  <meta name="description" content="Portfolio d'Enzo Sousa Teixeira, étudiant en BTS SIO option SLAM, développeur informatique et analyste programmeur à la recherche d'un stage." />
   <!-- Google Fonts : monospace pour l'ambiance terminal -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,10 +32,10 @@
       <li><a href="#hero" data-cmd="accueil">accueil</a></li>
       <li><a href="#cv" data-cmd="cv">cv</a></li>
       <li><a href="#experience" data-cmd="experience">experience</a></li>
-      <li><a href="#projets" data-cmd="projets">projets</a></li>
-      <li><a href="#certifications" data-cmd="certifications">certifications</a></li>
-      <li><a href="#veille" data-cmd="veille">veille</a></li>
-      <li><a href="#passions" data-cmd="passions">passions</a></li>
+      <li><a href="#competences" data-cmd="competences">compétences</a></li>
+      <li><a href="#langues" data-cmd="langues">langues</a></li>
+      <li><a href="#infos" data-cmd="infos">infos</a></li>
+      <li><a href="#centres-interet" data-cmd="centres-d-interet">centres d’intérêt</a></li>
       <li><a href="#contact" data-cmd="contact">contact</a></li>
     </ul>
     <div class="nav-status" id="nav-status">system ready</div>
@@ -65,17 +65,15 @@
         </div>
       </div>
       <div class="hero-content">
-        <h1 class="hero-title glitch-text" data-text="ENZO TEIXEIRA">ENZO TEIXEIRA</h1>
-        <p class="hero-subtitle">Étudiant en informatique &amp; Futur Product Owner</p>
-        <p class="hero-tagline">"Expériences numériques et analyse des besoins"</p>
+        <h1 class="hero-title glitch-text" data-text="ENZO SOUSA TEIXEIRA">ENZO SOUSA TEIXEIRA</h1>
+        <p class="hero-subtitle">Développeur informatique / Analyste programmeur</p>
+        <p class="hero-tagline">Étudiant en 1re année de BTS SIO (option SLAM), autonome, rigoureux et passionné de programmation. À la recherche d’un stage en développement logiciel.</p>
         <div class="hero-cta">
-          <a href="#projets" class="btn btn-primary">Voir mes projets</a>
+          <a href="#competences" class="btn btn-primary">Mes compétences</a>
           <a href="#cv" class="btn btn-outline">Consulter mon CV</a>
         </div>
         <div class="hero-social">
-          <a href="#" class="social-link" aria-label="GitHub">github</a>
-          <a href="#" class="social-link" aria-label="LinkedIn">linkedin</a>
-          <a href="mailto:contact@example.com" class="social-link" aria-label="Mail">mail</a>
+          <a href="mailto:enzo.teixeira0867@gmail.com" class="social-link" aria-label="Envoyer un e-mail">email</a>
         </div>
       </div>
     </div>
@@ -104,7 +102,7 @@
   </section>
 
   <!-- ========================================================================
-       STAGES & EXPÉRIENCES PRO — Layout détaillé (Lorem ipsum pour l'instant)
+       STAGES & EXPÉRIENCES PROFESSIONNELLES
        ======================================================================== -->
   <section id="experience" class="experience-section">
     <div class="section-header">
@@ -118,18 +116,12 @@
   </section>
 
   <!-- ========================================================================
-       PROJETS — Galerie en deux catégories, cartes interactives 3D / glitch
+       COMPÉTENCES — Technologies et outils issus du CV
        ======================================================================== -->
-  <section id="projets" class="projects-section">
+  <section id="competences" class="projects-section">
     <div class="section-header">
-      <h2 class="section-title"><span class="cmd">$</span> ls projects/</h2>
-      <p class="section-desc">Galerie séparée en deux catégories : lycée &amp; personnels.</p>
-    </div>
-
-    <div class="project-filters">
-      <button class="filter-btn active" data-filter="all">tous</button>
-      <button class="filter-btn" data-filter="lycee">lycée</button>
-      <button class="filter-btn" data-filter="personnel">personnel</button>
+      <h2 class="section-title"><span class="cmd">$</span> ls competences/</h2>
+      <p class="section-desc">Technologies, langages et outils utilisés en formation et en stage.</p>
     </div>
 
     <div class="project-grid" id="project-grid">
@@ -138,12 +130,12 @@
   </section>
 
   <!-- ========================================================================
-       CERTIFICATIONS & MOOCs — Badges validés / en préparation
+       LANGUES
        ======================================================================== -->
-  <section id="certifications" class="certs-section">
+  <section id="langues" class="certs-section">
     <div class="section-header">
-      <h2 class="section-title"><span class="cmd">$</span> cat certifications.txt</h2>
-      <p class="section-desc">Badges et certifications validés ou en préparation.</p>
+      <h2 class="section-title"><span class="cmd">$</span> cat langues.txt</h2>
+      <p class="section-desc">Langues et niveaux indiqués sur mon CV.</p>
     </div>
 
     <div class="certs-grid" id="certs-grid">
@@ -152,12 +144,12 @@
   </section>
 
   <!-- ========================================================================
-       VEILLE TECHNOLOGIQUE — Flux d'actualité / timeline d'articles
+       INFORMATIONS PRATIQUES
        ======================================================================== -->
-  <section id="veille" class="veille-section">
+  <section id="infos" class="veille-section">
     <div class="section-header">
-      <h2 class="section-title"><span class="cmd">$</span> tail -f tech-feed.log</h2>
-      <p class="section-desc">Ma veille technologique — sujets récents et lectures en cours.</p>
+      <h2 class="section-title"><span class="cmd">$</span> cat infos.txt</h2>
+      <p class="section-desc">Stage recherché, localisation et mobilité.</p>
     </div>
 
     <div class="veille-grid" id="veille-grid">
@@ -168,10 +160,10 @@
   <!-- ========================================================================
        PASSIONS — Section visuelle décalée hors informatique
        ======================================================================== -->
-  <section id="passions" class="passions-section">
+  <section id="centres-interet" class="passions-section">
     <div class="section-header">
-      <h2 class="section-title"><span class="cmd">$</span> cat passions.log</h2>
-      <p class="section-desc">Centres d'intérêt hors informatique.</p>
+      <h2 class="section-title"><span class="cmd">$</span> cat centres-interet.log</h2>
+      <p class="section-desc">Mes centres d’intérêt en dehors de l’informatique.</p>
     </div>
 
     <div class="passions-grid" id="passions-grid">
@@ -188,22 +180,21 @@
     </div>
     <div class="contact-content">
       <div class="contact-info">
-        <p><span class="label">Nom :</span> Enzo Teixeira</p>
-        <p><span class="label">Statut :</span> Étudiant en informatique &amp; Futur Product Owner</p>
-        <p><span class="label">Email :</span> <a href="mailto:contact@example.com">contact@example.com</a></p>
-        <p><span class="label">Localisation :</span> France</p>
+        <p><span class="label">Nom :</span> Enzo Sousa Teixeira</p>
+        <p><span class="label">Statut :</span> Étudiant en 1re année de BTS SIO, option SLAM — recherche de stage en développement logiciel</p>
+        <p><span class="label">Email :</span> <a href="mailto:enzo.teixeira0867@gmail.com">enzo.teixeira0867@gmail.com</a></p>
+        <p><span class="label">Téléphone :</span> <a href="tel:+33611027007">06 11 02 70 07</a></p>
+        <p><span class="label">Localisation :</span> Villers-le-Lac, France</p>
       </div>
       <div class="contact-social">
-        <a href="#" class="social-link">github</a>
-        <a href="#" class="social-link">linkedin</a>
-        <a href="mailto:contact@example.com" class="social-link">mail</a>
+        <a href="mailto:enzo.teixeira0867@gmail.com" class="social-link">email</a>
       </div>
     </div>
   </section>
 
   <footer class="terminal-footer">
     <div class="footer-content">
-      <p>&copy; <span id="year"></span> Enzo Teixeira — Portfolio terminal interactif.</p>
+      <p>&copy; <span id="year"></span> Enzo Sousa Teixeira — Portfolio terminal interactif.</p>
       <p>Construit avec HTML, CSS &amp; JavaScript Vanilla. Hébergé sur GitHub Pages.</p>
     </div>
   </footer>

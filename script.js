@@ -7,136 +7,119 @@
   'use strict';
 
   /* ------------------------------------------------------------------ */
-  /*  DONNÉES DU PORTFOLIO (placeholder — à personnaliser)              */
+  /*  DONNÉES DU PORTFOLIO                                               */
   /* ------------------------------------------------------------------ */
 
   const CV_DATA = [
     {
-      date: '2024 - Aujourd\'hui',
-      title: 'Étudiant en informatique',
-      company: 'Lycée / Établissement scolaire',
-      desc: 'Formation en informatique avec spécialisation développement web et analyse des besoins.',
+      date: '2025 - 2027',
+      title: 'BTS Services Informatiques aux Organisations — option SLAM',
+      company: 'Lycée Louis Pergaud',
+      desc: 'Formation aux solutions logicielles et applications métiers : programmation, modélisation des données et cybersécurité.',
       details: [
-        'Apprentissage du HTML, CSS, JavaScript',
-        'Notions de bases de données (SQL)',
-        'Introduction à l\'analyse des besoins utilisateurs',
-        'Projets de groupe en méthodologie agile',
+        'Développement web et applicatif : PHP 8, Symfony 6, React, JavaScript, HTML5 et CSS3',
+        'Modélisation Merise (MCD, MLD, MPD) et bases de données SQL (MySQL, MariaDB)',
       ],
     },
     {
-      date: '2023 - 2024',
-      title: 'Brevet des collèges / Niveau secondaire',
-      company: 'Collège',
-      desc: 'Obtention du brevet avec mention. Premier contact avec la programmation.',
+      date: 'Juin - juillet 2025',
+      title: 'Piscine — intégration en école de développement',
+      company: 'École 42, Lausanne',
+      desc: 'Épreuve intensive de programmation et d’algorithmique en langage C.',
       details: [
-        'Initiation à l\'algorithmique',
-        'Utilisation d\'outils bureautiques',
-        'Premiers pas en programmation visuelle',
+        'Gestion de la mémoire, pointeurs et algorithmique',
+        'Scripts Shell et environnement Unix/Linux',
+        'Pédagogie par les pairs : autonomie et résolution méthodique de problèmes',
       ],
     },
     {
-      date: 'En préparation',
-      title: 'Certification PIX',
-      company: 'PIX',
-      desc: 'Certification de compétences numériques en cours de validation.',
-      details: [
-        'Information et données',
-        'Communication et collaboration',
-        'Création de contenus numériques',
-        'Protection et sécurité',
-      ],
+      date: '2022 - 2025',
+      title: 'Baccalauréat général',
+      company: 'Lycée Edgar Faure',
+      desc: 'Enseignements scientifiques et numériques.',
+      details: [],
     },
   ];
 
   const EXPERIENCE_DATA = [
     {
-      date: '2025',
-      title: 'Stage de découverte',
-      company: 'Entreprise d\'accueil',
-      desc: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+      date: '26 mai - 26 juin 2026',
+      title: 'Technicien support IT (stage de 1re année BTS SIO)',
+      company: 'Cartier SA (Groupe Richemont) — La Chaux-de-Fonds, Suisse',
+      desc: 'Stage au sein de l’équipe support IT de niveau 1-2, dans un environnement de manufacture.',
+      details: [
+        'Inventaire, étiquetage et traçabilité de 210 unités (ordinateurs et écrans), puis recyclage avec suivi Excel.',
+        'Effacement sécurisé des données avant désaffectation et recyclage du matériel.',
+        'Sélection et préparation de postes de travail réattribués aux apprentis de la manufacture.',
+        'Prise en charge d’environ 6 tickets par jour dans ServiceNow et interventions utilisateurs sur site.',
+        'Outils : ServiceNow ITSM, Tanium et CyberArk.',
+      ],
     },
     {
-      date: '2024',
-      title: 'Projet scolaire',
-      company: 'Lycée',
-      desc: 'Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      date: '2021',
+      title: 'Stage en service après-vente',
+      company: 'Tissot SA — Le Locle, Suisse',
+      desc: 'Immersion logistique et contrôle qualité au sein de la manufacture horlogère.',
+      details: [
+        'Suivi administratif et logistique de pièces et montres en révision SAV.',
+        'Contrôle qualité rigoureux selon les standards de précision horlogère.',
+      ],
     },
     {
-      date: '2023',
-      title: 'Bénévolat',
-      company: 'Association',
-      desc: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+      date: '2021',
+      title: 'Stage en mécanique automobile',
+      company: 'BT Passion — Le Locle, Suisse',
+      desc: 'Découverte de la méthodologie de diagnostic et de la sécurité en atelier mécanique.',
+      details: [
+        'Découverte du diagnostic de pannes et de la révision technique.',
+        'Observation des règles de sécurité et des opérations de maintenance.',
+      ],
     },
   ];
 
   const PROJECTS_DATA = [
     {
-      id: 'p1',
-      title: 'Site vitrine lycée',
-      category: 'lycee',
-      desc: 'Création d\'un site vitrine pour un établissement scolaire avec HTML/CSS pur et design responsive.',
-      tech: ['HTML', 'CSS', 'JS'],
-      link: '#',
+      title: 'Développement web & frameworks',
+      category: 'Formation',
+      desc: 'Développement web et applicatif dans le cadre de ma formation BTS SIO, option SLAM.',
+      tech: ['PHP 8', 'Symfony 6', 'Twig', 'Doctrine ORM', 'React', 'JavaScript ES6+', 'HTML5 / CSS3', 'Bootstrap'],
     },
     {
-      id: 'p2',
-      title: 'Application de gestion',
-      category: 'lycee',
-      desc: 'Petite application de gestion de notes étudiants avec stockage local et interface terminal.',
-      tech: ['JavaScript', 'LocalStorage'],
-      link: '#',
+      title: 'Langages & algorithmique',
+      category: 'École 42',
+      desc: 'Compétences travaillées pendant la Piscine de l’École 42 à Lausanne.',
+      tech: ['C', 'Pointeurs', 'Gestion mémoire', 'Algorithmique avancée', 'Bash / Shell Unix', 'Norminette 42'],
     },
     {
-      id: 'p3',
-      title: 'Portfolio personnel',
-      category: 'personnel',
-      desc: 'Ce portfolio interactif avec thème terminal, animations et effets glitch.',
-      tech: ['HTML', 'CSS', 'JavaScript'],
-      link: '#',
+      title: 'Bases de données & modélisation',
+      category: 'BTS SIO',
+      desc: 'Conception de données et modélisation des applications.',
+      tech: ['SQL', 'MySQL', 'MariaDB', 'Merise (MCD, MLD, MPD)', 'MVC', 'POO'],
     },
     {
-      id: 'p4',
-      title: 'Outil d\'analyse de besoins',
-      category: 'personnel',
-      desc: 'Prototype d\'outil d\'analyse des besoins utilisateurs pour futurs projets produits.',
-      tech: ['JavaScript', 'UX/UI'],
-      link: '#',
-    },
-    {
-      id: 'p5',
-      title: 'Jeu de terminal',
-      category: 'personnel',
-      desc: 'Jeu d\'aventure textuel jouable directement dans un navigateur, style années 80.',
-      tech: ['JavaScript', 'CSS'],
-      link: '#',
-    },
-    {
-      id: 'p6',
-      title: 'Dashboard veille tech',
-      category: 'personnel',
-      desc: 'Tableau de bord regroupant mes sources de veille technologique préférées.',
-      tech: ['HTML', 'CSS', 'JS'],
-      link: '#',
+      title: 'Outils IT & environnements',
+      category: 'Outils',
+      desc: 'Outils utilisés en formation et lors de mon stage en support informatique.',
+      tech: ['ServiceNow ITSM', 'Tanium', 'CyberArk', 'Wipe sécurisé', 'Gestion de parc', 'Git / GitHub', 'Linux / Unix', 'PhpStorm', 'VS Code', 'Agile Scrum'],
     },
   ];
 
   const CERTS_DATA = [
-    { title: 'ANSSI - Sensibilisation cybersécurité', org: 'ANSSI', status: 'valid', icon: '🛡️' },
-    { title: 'PIX - Compétences numériques', org: 'PIX', status: 'prep', icon: '📊' },
-    { title: 'CISCO - Introduction à la cybersécurité', org: 'CISCO', status: 'prep', icon: '🌐' },
-    { title: 'OpenClassrooms - HTML/CSS', org: 'OpenClassrooms', status: 'valid', icon: '💻' },
+    { title: 'Portugais', level: 'Natif', desc: 'Langue maternelle, bilingue parfait', icon: 'PT' },
+    { title: 'Français', level: 'Bilingue C2', desc: 'Excellente aisance écrite et orale', icon: 'FR' },
+    { title: 'Anglais', level: 'Bilingue C2', desc: 'Veille technique et documentation', icon: 'EN' },
   ];
 
   const VEILLE_DATA = [
-    { date: '2026-10', title: 'WebAssembly : état de l\'art', source: 'Blog technique', desc: 'Exploration des performances de Wasm pour le web.', link: '#' },
-    { date: '2026-09', title: 'CSS Container Queries', source: 'MDN Web Docs', desc: 'Utilisation des container queries pour le responsive moderne.', link: '#' },
-    { date: '2026-08', title: 'Accessibilité web (a11y)', source: 'Article', desc: 'Bonnes pratiques pour rendre un site accessible à tous.', link: '#' },
+    { date: 'Stage recherché', title: 'Développement logiciel', source: 'BTS SIO — option SLAM', desc: 'Recherche un stage en développement logiciel.' },
+    { date: 'Localisation', title: 'Villers-le-Lac, France', source: 'Mobilité régionale', desc: 'Basé dans le Doubs, à proximité de la Suisse.' },
+    { date: 'Mobilité', title: 'Permis en cours d’acquisition', source: 'Permis de conduire', desc: 'Information indiquée sur mon CV.' },
   ];
 
   const PASSIONS_DATA = [
-    { title: 'Jeux vidéo rétro', desc: 'Amateur de jeux des années 80-90 et pixel art.', icon: '🎮' },
-    { title: 'Musique électronique', desc: 'Création et écoute de sons synthétiques.', icon: '🎹' },
-    { title: 'Science-fiction', desc: 'Lecture et cinéma d\'anticipation technologique.', icon: '🚀' },
+    { title: 'Sports collectifs', desc: 'Football et volleyball : communication et esprit d’équipe.', icon: '⚽' },
+    { title: 'Photo & high-tech', desc: 'Création visuelle, cadrage et retouche numérique.', icon: '📷' },
+    { title: 'Jeux vidéo', desc: 'Jeux de stratégie et de réflexion, avec une approche tactique.', icon: '🎮' },
   ];
 
   /* ------------------------------------------------------------------ */
@@ -146,9 +129,10 @@
   const typingEl = document.getElementById('typing');
   const outputEl = document.getElementById('hero-output');
   const heroLines = [
-    'Bonjour, je suis Enzo Teixeira.',
-    'Étudiant en informatique & Futur Product Owner.',
-    '"Expériences numériques et analyse des besoins".',
+    'Bonjour, je suis Enzo Sousa Teixeira.',
+    'Étudiant en BTS SIO, option SLAM.',
+    'Développeur informatique / Analyste programmeur.',
+    'À la recherche d’un stage en développement logiciel.',
     '',
     'Bienvenue sur mon portfolio terminal.',
     'Tapez \'help\' pour voir les commandes disponibles.',
@@ -280,28 +264,22 @@
         <h3 class="exp-title">${exp.title}</h3>
         <span class="exp-company">${exp.company}</span>
         <p class="exp-desc">${exp.desc}</p>
+        ${exp.details && exp.details.length ? `<ul class="cv-detail-list">${exp.details.map((detail) => `<li>${detail}</li>`).join('')}</ul>` : ''}
       `;
       experienceGrid.appendChild(card);
     });
   }
 
   /* ------------------------------------------------------------------ */
-  /*  RENDU PROJETS + FILTRES                                           */
+  /*  RENDU COMPÉTENCES                                                 */
   /* ------------------------------------------------------------------ */
 
   const projectGrid = document.getElementById('project-grid');
-  const filterBtns = document.querySelectorAll('.filter-btn');
-
-  function renderProjects(filter = 'all') {
+  function renderProjects() {
     projectGrid.innerHTML = '';
-    const filtered = filter === 'all'
-      ? PROJECTS_DATA
-      : PROJECTS_DATA.filter((p) => p.category === filter);
-
-    filtered.forEach((proj) => {
+    PROJECTS_DATA.forEach((proj) => {
       const card = document.createElement('div');
       card.className = 'project-card';
-      card.dataset.category = proj.category;
       card.innerHTML = `
         <div class="project-glitch">[TERMINAL]</div>
         <div class="project-image"></div>
@@ -312,23 +290,14 @@
           <div class="project-tech">
             ${proj.tech.map((t) => `<span class="tech-tag">${t}</span>`).join('')}
           </div>
-          <a href="${proj.link}" class="project-link" target="_blank" rel="noopener">ouvrir</a>
         </div>
       `;
       projectGrid.appendChild(card);
     });
   }
 
-  filterBtns.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach((b) => b.classList.remove('active'));
-      btn.classList.add('active');
-      renderProjects(btn.dataset.filter);
-    });
-  });
-
   /* ------------------------------------------------------------------ */
-  /*  RENDU CERTIFICATIONS                                              */
+  /*  RENDU LANGUES                                                     */
   /* ------------------------------------------------------------------ */
 
   const certsGrid = document.getElementById('certs-grid');
@@ -341,17 +310,15 @@
       card.innerHTML = `
         <span class="cert-badge">${cert.icon}</span>
         <h3 class="cert-title">${cert.title}</h3>
-        <span class="cert-org">${cert.org}</span>
-        <span class="cert-status ${cert.status}">
-          ${cert.status === 'valid' ? 'Validé' : 'En préparation'}
-        </span>
+        <span class="cert-org">${cert.level}</span>
+        <p class="cert-status">${cert.desc}</p>
       `;
       certsGrid.appendChild(card);
     });
   }
 
   /* ------------------------------------------------------------------ */
-  /*  RENDU VEILLE TECHNOLOGIQUE                                        */
+  /*  RENDU INFORMATIONS PRATIQUES                                      */
   /* ------------------------------------------------------------------ */
 
   const veilleGrid = document.getElementById('veille-grid');
@@ -366,7 +333,6 @@
         <h3 class="veille-title">${v.title}</h3>
         <span class="veille-source">${v.source}</span>
         <p class="veille-desc">${v.desc}</p>
-        <a href="${v.link}" class="veille-link" target="_blank" rel="noopener">lire</a>
       `;
       veilleGrid.appendChild(card);
     });
