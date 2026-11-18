@@ -36,8 +36,8 @@
       date: '2022 - 2025',
       title: 'Baccalauréat général',
       company: 'Lycée Edgar Faure',
-      desc: 'Enseignements scientifiques et numériques.',
-      details: [],
+      desc: 'Baccalauréat Général',
+      details: ['Spécialité Mathématiques', 'Langue Litterature et Culture Étrangère: Anglais'],
     },
   ];
 
@@ -69,10 +69,9 @@
       date: '2021',
       title: 'Stage en mécanique automobile',
       company: 'BT Passion — Le Locle, Suisse',
-      desc: 'Découverte de la méthodologie de diagnostic et de la sécurité en atelier mécanique.',
+      desc: 'Sérvice complet sur véhicules : diagnostic, entretien et révision technique.',
       details: [
-        'Découverte du diagnostic de pannes et de la révision technique.',
-        'Observation des règles de sécurité et des opérations de maintenance.',
+        'Diagnostic et réparation de vehicules en quasi-autonomie, sous supervision du chef d’atelier.',
       ],
     },
   ];
@@ -104,7 +103,18 @@
     },
   ];
 
-  const CERTS_DATA = [
+  const CERTIFICATES_DATA = [
+    { title: 'Attestation ANSSI', file: 'assets/anssi.pdf' },
+    { title: 'Attestation CNIL — module 1', file: 'assets/cnil-1.pdf' },
+    { title: 'Attestation CNIL — module 2', file: 'assets/cnil-2.pdf' },
+    { title: 'Attestation CNIL — module 3', file: 'assets/cnil-3.pdf' },
+    { title: 'Attestation CNIL — module 4', file: 'assets/cnil-4.pdf' },
+    { title: 'Attestation CNIL — module 5', file: 'assets/cnil-5.pdf' },
+    { title: 'Attestation CNIL — module 6', file: 'assets/cnil-6.pdf' },
+    { title: 'Attestation EBIOS', file: 'assets/ebios.pdf' },
+  ];
+
+  const LANGUAGES_DATA = [
     { title: 'Portugais', level: 'Natif', desc: 'Langue maternelle, bilingue parfait', icon: 'PT' },
     { title: 'Français', level: 'Bilingue C2', desc: 'Excellente aisance écrite et orale', icon: 'FR' },
     { title: 'Anglais', level: 'Bilingue C2', desc: 'Veille technique et documentation', icon: 'EN' },
@@ -297,14 +307,48 @@
   }
 
   /* ------------------------------------------------------------------ */
+  /*  RENDU CERTIFICATIONS                                              */
+  /* ------------------------------------------------------------------ */
+
+  const certificateTabs = document.getElementById('certificate-tabs');
+  const certificateTitle = document.getElementById('certificate-title');
+  const certificateOpen = document.getElementById('certificate-open');
+  const certificatePdf = document.getElementById('certificate-pdf');
+
+  function renderCertificates() {
+    certificateTabs.innerHTML = '';
+    CERTIFICATES_DATA.forEach((certificate, index) => {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'certificate-tab';
+      button.textContent = certificate.title;
+      button.setAttribute('aria-pressed', 'false');
+      button.addEventListener('click', () => {
+        certificateTabs.querySelectorAll('.certificate-tab').forEach((tab) => {
+          tab.classList.remove('is-active');
+          tab.setAttribute('aria-pressed', 'false');
+        });
+        button.classList.add('is-active');
+        button.setAttribute('aria-pressed', 'true');
+        certificateTitle.textContent = certificate.title;
+        certificatePdf.src = certificate.file;
+        certificatePdf.title = `Visionneuse PDF — ${certificate.title}`;
+        certificateOpen.href = certificate.file;
+      });
+      certificateTabs.appendChild(button);
+      if (index === 0) button.click();
+    });
+  }
+
+  /* ------------------------------------------------------------------ */
   /*  RENDU LANGUES                                                     */
   /* ------------------------------------------------------------------ */
 
   const certsGrid = document.getElementById('certs-grid');
 
-  function renderCerts() {
+  function renderLanguages() {
     certsGrid.innerHTML = '';
-    CERTS_DATA.forEach((cert) => {
+    LANGUAGES_DATA.forEach((cert) => {
       const card = document.createElement('div');
       card.className = 'cert-card';
       card.innerHTML = `
@@ -395,7 +439,8 @@
     renderCV();
     renderExperience();
     renderProjects();
-    renderCerts();
+    renderCertificates();
+    renderLanguages();
     renderVeille();
     renderPassions();
 

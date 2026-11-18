@@ -33,6 +33,7 @@
       <li><a href="#cv" data-cmd="cv">cv</a></li>
       <li><a href="#experience" data-cmd="experience">experience</a></li>
       <li><a href="#competences" data-cmd="competences">compétences</a></li>
+      <li><a href="#certifications" data-cmd="certifications">certifications</a></li>
       <li><a href="#langues" data-cmd="langues">langues</a></li>
       <li><a href="#infos" data-cmd="infos">infos</a></li>
       <li><a href="#centres-interet" data-cmd="centres-d-interet">centres d’intérêt</a></li>
@@ -66,8 +67,8 @@
       </div>
       <div class="hero-content">
         <h1 class="hero-title glitch-text" data-text="ENZO SOUSA TEIXEIRA">ENZO SOUSA TEIXEIRA</h1>
-        <p class="hero-subtitle">Développeur informatique / Analyste programmeur</p>
-        <p class="hero-tagline">Étudiant en 1re année de BTS SIO (option SLAM), autonome, rigoureux et passionné de programmation. À la recherche d’un stage en développement logiciel.</p>
+        <p class="hero-subtitle">Développeur full-stack / Futur Product Owner</p>
+        <p class="hero-tagline">Étudiant en 2ème année de BTS SIO (option SLAM), autonome, rigoureux et attentif. En apprentissage avec le ministère des armées.</p>
         <div class="hero-cta">
           <a href="#competences" class="btn btn-primary">Mes compétences</a>
           <a href="#cv" class="btn btn-outline">Consulter mon CV</a>
@@ -126,6 +127,31 @@
 
     <div class="project-grid" id="project-grid">
       <!-- Injecté par JS -->
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CERTIFICATIONS — Documents PDF
+       ======================================================================== -->
+  <section id="certifications" class="certificates-section">
+    <div class="section-header">
+      <h2 class="section-title"><span class="cmd">$</span> ls certifications/</h2>
+      <p class="section-desc">Consultez les attestations PDF.</p>
+    </div>
+
+    <div class="certificate-tabs" id="certificate-tabs" aria-label="Choisir une certification"></div>
+    <div class="certificate-viewer">
+      <div class="certificate-viewer-header">
+        <h3 id="certificate-title">Attestation ANSSI</h3>
+        <a id="certificate-open" href="assets/anssi.pdf" target="_blank" rel="noopener">Ouvrir le PDF</a>
+      </div>
+      <iframe
+        id="certificate-pdf"
+        class="certificate-pdf"
+        src="assets/anssi.pdf"
+        title="Visionneuse PDF — attestation ANSSI"
+        loading="lazy"
+      ></iframe>
     </div>
   </section>
 

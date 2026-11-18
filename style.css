@@ -959,6 +959,67 @@ section:nth-child(even) {
   background: rgba(255, 0, 85, 0.1);
 }
 
+/* --- Visionneuse des certifications PDF --- */
+.certificate-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: var(--spacing-md);
+}
+
+.certificate-tab {
+  padding: 0.65rem 1rem;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
+  color: var(--text-color);
+  font-family: var(--font-mono);
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.certificate-tab:hover,
+.certificate-tab.is-active {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+  background: rgba(0, 255, 65, 0.1);
+}
+
+.certificate-viewer {
+  overflow: hidden;
+  border: var(--border-width) solid var(--border-color);
+  border-radius: var(--radius);
+  background: var(--bg-secondary);
+}
+
+.certificate-viewer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  border-bottom: var(--border-width) solid var(--border-color);
+}
+
+.certificate-viewer-header h3 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: var(--font-size-lg);
+}
+
+.certificate-viewer-header a {
+  color: var(--accent-color);
+  white-space: nowrap;
+}
+
+.certificate-pdf {
+  display: block;
+  width: 100%;
+  height: clamp(420px, 75vh, 900px);
+  border: 0;
+  background: #fff;
+}
+
 /* --- Veille Technologique --- */
 .veille-grid {
   display: grid;
@@ -1184,6 +1245,11 @@ section:nth-child(even) {
     right: auto !important;
     border-left-color: var(--border-color) !important;
     border-right-color: transparent !important;
+  }
+
+  .certificate-viewer-header {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .project-grid {
